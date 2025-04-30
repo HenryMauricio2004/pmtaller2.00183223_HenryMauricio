@@ -1,6 +1,8 @@
 package com.pmtaller2.HenryMauricio.ui.Screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +13,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -26,10 +29,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.pmtaller2.HenryMauricio.R
 import com.pmtaller2.HenryMauricio.ui.dataClass.Restaurant
 import com.pmtaller2.HenryMauricio.ui.dataClass.foodCategories
 import com.pmtaller2.HenryMauricio.ui.dataClass.restaurants
@@ -42,10 +48,19 @@ fun RestaurantCard(restaurant: Restaurant, navController: NavController){
             val id = restaurant.id
             navController.navigate("RestaurantProfile/$id")
                   },
-        modifier = Modifier.clip(RoundedCornerShape(3.dp)).size(150.dp),
+        modifier = Modifier.size(150.dp),
 
         ){
-        Text(text = restaurant.name, fontWeight = FontWeight.ExtraBold, color = Color.White, textAlign = TextAlign.Center)
+
+        Box(){
+            Image(
+                painter = painterResource(id = R.drawable.pizza_placeholder),
+                contentDescription = "Background Restaurant",
+                modifier = Modifier.fillMaxSize().clip(CircleShape),
+            )
+            Text(text = restaurant.name, fontWeight = FontWeight.ExtraBold, color = Color.White, textAlign = TextAlign.Center)
+        }
+
     }
 
 }
