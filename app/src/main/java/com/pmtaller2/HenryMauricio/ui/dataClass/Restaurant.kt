@@ -17,7 +17,7 @@ val restaurants = listOf(
         id = 1,
         name = "Pizza Planet",
         description = "Las mejores pizzas del universo",
-        imageUrl = "https://example.com/pizza.png",
+        imageUrl = "https://www.sortirambnens.com/wp-content/uploads/2019/02/pizza-de-peperoni.jpg",
         categories = listOf("Pizzas", "Comida Italiana", "Vegetariano"),
         menu = listOf(
             Dish(
@@ -27,10 +27,10 @@ val restaurants = listOf(
                 imageUrl = "https://example.com/pepperoni.jpg"
             ),
             Dish(
-                id = 1,
+                id = 2,
                 name = "Pizza Vegetariana",
                 description = "Pizza saludavle con verduras frescas",
-                imageUrl = "https://example.com/veggie.jpg"
+                imageUrl = "https://www.revistapancaliente.co/wp-content/uploads/2024/09/Pizza_vegetariana.jpg"
             )
         )
     ),
@@ -45,13 +45,13 @@ val restaurants = listOf(
                 id = 3,
                 name = "Hamburguesa doble queso",
                 description = "Doble carne, oble queso, doble sabor.",
-                imageUrl = "https://example.com/doublecheese.jpg"
+                imageUrl = "https://static.wixstatic.com/media/29cc8e_aaad1f9b690b4176a0cef213b971f787~mv2.jpg/v1/fill/w_568,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/29cc8e_aaad1f9b690b4176a0cef213b971f787~mv2.jpg"
             ),
             Dish(
                 id = 4,
                 name = "Hamburguesa Vegana",
                 description = "Una opción deliciosa y saludable",
-                imageUrl = "https://example.com/veganburger.jpg"
+                imageUrl = "https://www.vitamixespana.com/recetas/wp-content/uploads/2020/04/hamburguesa-vegana-de-arroz-y-calabacin-des-1.jpg"
             )
         )
     ),
